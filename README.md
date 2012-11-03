@@ -84,3 +84,9 @@ require 'verbose_hash_fetch'
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+
+## Credits
+
+I was complaining on Twitter, so [Roel van Dijk](http://twitter.com/rdvdijk)
+made it and put it in a Gist. I just converted it into a gem.
