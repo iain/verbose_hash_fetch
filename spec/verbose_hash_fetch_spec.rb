@@ -1,13 +1,13 @@
 require 'verbose_hash_fetch'
 
-describe "VerboseHashFetch" do
+RSpec.describe "VerboseHashFetch" do
 
   let(:hash) { { :foo => "bar" } }
 
   context "with one argument" do
 
     it "fetches an existing key" do
-      hash.fetch(:foo).should eq "bar"
+      expect(hash.fetch(:foo)).to eq "bar"
     end
 
     it "raises a KeyError for non existing keys" do
@@ -23,11 +23,11 @@ describe "VerboseHashFetch" do
   context "with two arguments" do
 
     it "fetches the existing value" do
-      hash.fetch(:foo, "default").should eq "bar"
+      expect(hash.fetch(:foo, "default")).to eq "bar"
     end
 
     it "uses the 2nd argument when key not found" do
-      hash.fetch(:bar, "default").should eq "default"
+      expect(hash.fetch(:bar, "default")).to eq "default"
     end
 
   end
@@ -35,11 +35,11 @@ describe "VerboseHashFetch" do
   context "with a block" do
 
     it "fetches the existing value" do
-      hash.fetch(:foo) { "default" }.should eq "bar"
+      expect(hash.fetch(:foo) { "default" }).to eq "bar"
     end
 
     it "evaluates the block when key not found" do
-      hash.fetch(:bar) { |k| "default #{k}" }.should eq "default bar"
+      expect(hash.fetch(:bar) { |k| "default #{k}" }).to eq "default bar"
     end
 
   end
