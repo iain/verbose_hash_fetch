@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "verbose_hash_fetch"
-  gem.version       = '0.0.1'
+  gem.version       = '0.0.2'
   gem.authors       = ["iain"]
   gem.email         = ["iain@iain.nl"]
   gem.description   = %q{Monkey patches Hash#fetch to also show the entire hash in the error}
